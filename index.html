@@ -38,6 +38,17 @@
 <p>The strongest side of lexical-semantic resources is their interpretability -- they are entirely human-readable and drawn distinctions are motivated by lexicographic or psychological considerations. On the downside,  these WordNet-like resources are expensive to create, and it is not easy to adapt them to a given domain of interest. On the other hand, corpus-driven approaches are strong at adaptivity -- they can be re-trained on a new corpus, thus naturally adapting to the domain at hand. If fitted with a word sense induction algorithm, corpus-driven approaches can also discover new senses. However, the representations they deliver are often not matching the standards of lexicography, and they rather distinguish word usages than senses. Moreover, especially for dense vector representations as present in latent vector spaces  and word embeddings, the representations are barely interpretable. </p>
 
 <p>The main motivation of the technique described in this paper is to close this gap between interpretability and adaptivity of lexical-semantic models by linking word sense embeddings to synsets. We demonstrate usage of our method on a combination of BabelNet and AdaGram  sense embeddings. However the approach can be straightforwardly applied to any WordNet-like resource and word sense embeddings.  </p>
+
+<h3>
+<a id="downloads" class="anchor" href="#downloads" aria-hidden="true"><span class="octicon octicon-link"></span></a>Downloads</h3>
+
+<ul>
+<li><a href="http://panchenko.me/data/joint/adagram-model-wacky+ukwac-raw">AdaGram word sense embeddings trained on the ukWaC+WaCypedia_EN corpus</a></li>
+<li>You can obtain BabelNet synsets from their <a href="http://babelnet.org">official site</a>
+</li>
+<li><a href="https://docs.google.com/spreadsheets/d/1DvPAgndoYg15GhElDqWLz4fySoX3GISqabMrLTABCtU/edit?usp=sharing">Mapping between AdaGram sense embeddings and BabelNet synsets for 5209 ambigous words</a></li>
+<li><a href="https://docs.google.com/spreadsheets/d/1h_R0Ja1sZnFBud0nPPWb9JO6kB_8NfDz76AISo9FWXY/edit?usp=sharing">Evaluation dataset: manual mapping between AdaGram sense embeddings and BabelNet senses for 50 words</a></li>
+</ul>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/alexanderpanchenko">alexanderpanchenko</a></p>
