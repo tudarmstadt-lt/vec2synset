@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>vec2synset by alexanderpanchenko</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>vec2synset</h1>
+        <p>Making word sense embeddings interpretable. A tool for matching word sense embeddings with synsets of lexical resources.</p>
+
+        <p class="view"><a href="https://github.com/alexanderpanchenko/vec2synset">View the Project on GitHub <small>alexanderpanchenko/vec2synset</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/alexanderpanchenko/vec2synset/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/alexanderpanchenko/vec2synset/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/alexanderpanchenko/vec2synset">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivation</h3>
+
+<p>Word sense embeddings represent a word sense as a low-dimensional vector. While this representation is potentially useful for NLP applications, its interpretability is inherently limited. We propose a simple technique that improves interpretability of sense vectors by mapping them to synsets of a lexical resource. Our experiments with AdaGram sense embeddings and BabelNet synsets show precision of 0.87, recall of 0.41 and AUC of 0.79.</p>
+
+<p>Two key approaches to modelling semantics of lexical units are lexicography and statistical corpus analysis. In the first approach, a human explicitly encodes lexical-semantic knowledge, usually in the form of synsets, typed relations between synsets and sense definitions. A prominent examples of this approach is Princeton WordNet. The second approach makes use of text corpora to extract relations between words and feature representations of words and senses. These methods are trying to avoid manual work as much as possible. Prominent examples of this group of methods are distributional models and word embeddings.   </p>
+
+<p>The strongest side of lexical-semantic resources is their interpretability -- they are entirely human-readable and drawn distinctions are motivated by lexicographic or psychological considerations. On the downside,  these WordNet-like resources are expensive to create, and it is not easy to adapt them to a given domain of interest. On the other hand, corpus-driven approaches are strong at adaptivity -- they can be re-trained on a new corpus, thus naturally adapting to the domain at hand. If fitted with a word sense induction algorithm, corpus-driven approaches can also discover new senses. However, the representations they deliver are often not matching the standards of lexicography, and they rather distinguish word usages than senses. Moreover, especially for dense vector representations as present in latent vector spaces  and word embeddings, the representations are barely interpretable. </p>
+
+<p>The main motivation of the technique described in this paper is to close this gap between interpretability and adaptivity of lexical-semantic models by linking word sense embeddings to synsets. We demonstrate usage of our method on a combination of BabelNet and AdaGram  sense embeddings. However the approach can be straightforwardly applied to any WordNet-like resource and word sense embeddings.  </p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/alexanderpanchenko">alexanderpanchenko</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
