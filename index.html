@@ -1,35 +1,26 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>vec2synset by alexanderpanchenko</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
+    <title>vec2synset by tudarmstadt-lt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>vec2synset</h1>
-        <p>Making word sense embeddings interpretable. A tool for matching word sense embeddings with synsets of lexical resources.</p>
+    <section class="page-header">
+      <h1 class="project-name">vec2synset</h1>
+      <h2 class="project-tagline">Making word sense embeddings interpretable: a tool for tagging word sense embeddings with synsets of lexical resources.</h2>
+      <a href="https://github.com/tudarmstadt-lt/vec2synset" class="btn">View on GitHub</a>
+      <a href="https://github.com/tudarmstadt-lt/vec2synset/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/tudarmstadt-lt/vec2synset/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-        <p class="view"><a href="https://github.com/alexanderpanchenko/vec2synset">View the Project on GitHub <small>alexanderpanchenko/vec2synset</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/alexanderpanchenko/vec2synset/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/alexanderpanchenko/vec2synset/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/alexanderpanchenko/vec2synset">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivation</h3>
+    <section class="main-content">
+      <h3>
+<a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Motivation</h3>
 
 <p>Word sense embeddings represent a word sense as a low-dimensional vector. While this representation is potentially useful for NLP applications, its interpretability is inherently limited. We propose a simple technique that improves interpretability of sense vectors by mapping them to synsets of a lexical resource. Our experiments with AdaGram sense embeddings and BabelNet synsets show precision of 0.87, recall of 0.41 and AUC of 0.79.</p>
 
@@ -40,7 +31,7 @@
 <p>The main motivation of the technique described in this paper is to close this gap between interpretability and adaptivity of lexical-semantic models by linking word sense embeddings to synsets. We demonstrate usage of our method on a combination of BabelNet and AdaGram  sense embeddings. However the approach can be straightforwardly applied to any WordNet-like resource and word sense embeddings.  </p>
 
 <h3>
-<a id="downloads" class="anchor" href="#downloads" aria-hidden="true"><span class="octicon octicon-link"></span></a>Downloads</h3>
+<a id="downloads" class="anchor" href="#downloads" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Downloads</h3>
 
 <ul>
 <li>
@@ -50,13 +41,15 @@
 <li><a href="https://docs.google.com/spreadsheets/d/1DvPAgndoYg15GhElDqWLz4fySoX3GISqabMrLTABCtU/edit?usp=sharing">Mapping between AdaGram sense embeddings and BabelNet synsets for 5209 ambigous words</a></li>
 <li><a href="https://docs.google.com/spreadsheets/d/1h_R0Ja1sZnFBud0nPPWb9JO6kB_8NfDz76AISo9FWXY/edit?usp=sharing">Evaluation dataset: manual mapping between AdaGram sense embeddings and BabelNet senses for 50 words</a></li>
 </ul>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/alexanderpanchenko">alexanderpanchenko</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/tudarmstadt-lt/vec2synset">vec2synset</a> is maintained by <a href="https://github.com/tudarmstadt-lt">tudarmstadt-lt</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+
+    </section>
+
+  
   </body>
 </html>
