@@ -63,14 +63,15 @@
 <ul>
 <li>
 <a href="http://panchenko.me/data/joint/adagram/adagram-model-wacky+ukwac-raw">AdaGram word sense embeddings</a> trained on the combination of the ukWaC and <a href="http://wacky.sslmit.unibo.it/doku.php?id=corpora">WaCypedia_EN</a> corpora. Use <a href="https://github.com/sbos/AdaGram.jl">AdaGram</a> tool to load and use these word sense vectors.</li>
-<li>You can obtain BabelNet synsets from their <a href="http://babelnet.org">official site</a>. In the experiment, described in the paper we used synsets and sense embeddings of the following <a href="http://panchenko.me/data/joint/adagram/voc-5209.csv">5209 ambiguous words</a>. </li>
+<li>Bag-of-words that represent <a href="http://panchenko.me/data/joint/ddt/ddt-adagram-ukwac+wacky-476k-closure-v3.csv.gz">AdaGram senses</a> i.e. top nearest neighbours of the corresponding sense vectors. </li>
+<li>The bag-of-words that represent <a href="http://panchenko.me/data/joint/adagram/babelnet-bow-5190.pkl">BabelNet synsets</a> in the cPickle format for the following <a href="http://panchenko.me/data/joint/adagram/voc-5209.csv">5209 ambiguous words</a> used in the experiment.  You can obtain BabelNet synsets for other words from their <a href="http://babelnet.org">official web site</a>. </li>
 <li>
 <a href="https://docs.google.com/spreadsheets/d/1DvPAgndoYg15GhElDqWLz4fySoX3GISqabMrLTABCtU/edit?usp=sharing">Mapping</a> between AdaGram sense embeddings and BabelNet synsets for the mentioned above 5209 ambigous words.</li>
 <li>
 <a href="https://docs.google.com/spreadsheets/d/1h_R0Ja1sZnFBud0nPPWb9JO6kB_8NfDz76AISo9FWXY/edit?usp=sharing">Evaluation dataset</a> manual mapping between AdaGram sense embeddings and BabelNet synsets for ambigous 50 words.</li>
 <li>
 <a href="http://panchenko.me/data/joint/adagram/">More AdaGram sense embeddings</a> based on different sense granularities (the alpha parameter 0.05, 0.12, 0.15, 0.20, 0.75) trained on a 59 Gb corpus (a combination of Wikipedia, ukWaC, Gigaword and Leipzig news corpus).</li>
-<li>Original publication: <a href="http://www.lrec-conf.org/proceedings/lrec2016/pdf/625_Paper.pdf">Paper PDF</a> <a href="http://panchenko.me/papers/lrec-poster-final.pdf">Poster PDF</a>
+<li>Detailed description of the method: <a href="http://www.lrec-conf.org/proceedings/lrec2016/pdf/625_Paper.pdf">Paper PDF</a> <a href="http://panchenko.me/papers/lrec-poster-final.pdf">Poster PDF</a>
 </li>
 </ul>
 
