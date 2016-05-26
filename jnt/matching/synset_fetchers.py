@@ -3,26 +3,24 @@ import requests.packages.urllib3
 requests.packages.urllib3.disable_warnings()
 import ujson as json
 import re
-from jnt.morph import tokenize, lemmatize_word
 from os.path import splitext
 from time import time
 from pandas import read_csv
-import codecs
 from collections import defaultdict, Counter
 from traceback import format_exc
 import cPickle as pickle
-from jnt.common import exists
-import operator
-from jnt.common import ensure_dir
-from os.path import join
-from jnt.morph import get_stoplist
-from jnt.patterns import re_spaced_numbers
 from time import sleep
-from jnt.common import load_voc
-from jnt.utils.freq import load_freq
 import gzip
 import codecs
+from os.path import join
+from jnt.common import exists
+from jnt.common import ensure_dir
+from jnt.morph import get_stoplist
+from jnt.patterns import re_spaced_numbers
 from jnt.utils.freq import FreqDictionary
+from jnt.common import load_voc
+from jnt.morph import tokenize, lemmatize_word
+
 
 BABELNET_KEYS = [""]
 BABELNET_ENDPOINT = "https://babelnet.io/v1/"
@@ -66,21 +64,20 @@ class DailyLimitException(Exception):
 
 
 class BabelNet(object):
-    def __init__(self, babelnet_keys, babelnet_dir="", freq_fpath="", normalized=True, divide_by_freq=False, force_api=False):
+    def __init__(self, babelnet_keys, babelnet_fpath="", freq_fpath="", normalized=True, divide_by_freq=False, force_api=False):
         self._babelnet_keys = babelnet_keys
-        self._babelnet_dir = babelnet_dir
+        self._babelnet_dir = babelnet_fpath
         ensure_dir(self._babelnet_dir)
         self._normalized = normalized
         self._force_api = force_api
         self._freq =  FreqDictionary(freq_fpath)
-        self._babelnet = self._load(babelnet_dir, divide_by_freq=divide_by_freq) # (word->sense_id->{"bow" , "wnOffset"}
+        self._babelnet = self._load(babelnet_fpath, divide_by_freq=divide_by_freq)  # format: (word->sense_id->{"bow" , "wnOffset"}
 
     @property
     def data(self):
         return self._babelnet
 
-    def _load(self, babelnet_dir, divide_by_freq=False, sanity_check=True):
-        babelnet_fpath = join(babelnet_dir, BABELNET_PKL)
+    def _load(self, babelnet_fpath, divide_by_freq=False, sanity_check=True):
         if not exists(babelnet_fpath): return defaultdict(dict)
 
         with open(babelnet_fpath, 'rb') as babelnet_file:
@@ -112,7 +109,6 @@ class BabelNet(object):
                     bow_range_norm = Counter({w: bow[w] / max_freq_norm for w in bow if good_token(w)})
 
                     bn[word][sense_id]["bow"] = bow_range_norm
-
 
         return bn
 

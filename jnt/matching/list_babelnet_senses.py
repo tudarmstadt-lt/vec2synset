@@ -11,7 +11,7 @@ babelnet_dir = "/Users/alex/tmp/matching/babelnet-eval/"
 adagram_voc_fpath = "/Users/alex/tmp/adagram/HugeModel-voc.csv"
 
 
-babelnet = BabelNet(babelnet_keys=BABELNET_KEYS, babelnet_dir=babelnet_dir,
+babelnet = BabelNet(babelnet_keys=BABELNET_KEYS, babelnet_fpath=babelnet_dir,
                     freq_fpath="", divide_by_freq=False)
 adagram_voc = load_voc(adagram_voc_fpath)
 voc = load_voc(voc_fpath)

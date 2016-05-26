@@ -8,7 +8,6 @@ from jnt.common import take
 from jnt.matching.synset_fetchers import DailyLimitException
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.preprocessing import binarize
-from pandas import read_csv
 from jnt.matching.synset_fetchers import filter_ddt_by_voc
 from jnt.matching.synset_fetchers import BabelNet, SenseClusters, BABELNET_KEYS
 import codecs
@@ -31,7 +30,7 @@ MIN_SENSE_PROB = 0.05
 
 def create_mapping(babelnet_dir, adagram_fpath, match_fpath, threshold=THRESHOLD):
     print ">>> write babelnet vocabulary"
-    babelnet = BabelNet(babelnet_keys=BABELNET_KEYS, babelnet_dir=babelnet_dir)
+    babelnet = BabelNet(babelnet_keys=BABELNET_KEYS, babelnet_fpath=babelnet_dir)
     babelnet_voc_fpath = join(babelnet_dir, "voc.csv")
     with codecs.open(babelnet_voc_fpath, "w", "utf-8") as out:
         out.write("word\n")

@@ -1,0 +1,15 @@
+pymorphy2
+requests
+ujson
+ipython
+six
+spacy
+stop-words
+sklearn
+scipy
+nltk
+numpy
+scikit-learn
+scipy
+pandas
+spacy

@@ -54,7 +54,7 @@ freq_fpath = "" # "/Users/alex/tmp/st/word-freq-t10.csv"
 
 from time import time
 tic = time()
-babelnet = BabelNet(babelnet_keys=BABELNET_KEYS, babelnet_dir=BABELNET_DIR, freq_fpath=freq_fpath, divide_by_freq=False)
+babelnet = BabelNet(babelnet_keys=BABELNET_KEYS, babelnet_fpath=BABELNET_DIR, freq_fpath=freq_fpath, divide_by_freq=False)
 print "BabelNet load time:", time()-tic
 
 tic = time()
